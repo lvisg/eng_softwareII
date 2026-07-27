@@ -1,0 +1,218 @@
+:root {
+    --primary-color: #0284c7;
+    --primary-hover: #0369a1;
+    --bg-surface: #ffffff;
+    --bg-section: #f8fafc;
+    --border-color: #cbd5e1;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --danger-color: #ef4444;
+    --focus-ring: rgba(2, 132, 199, 0.25);
+}
+
+.formulario {
+    max-width: 960px;
+    margin: 32px auto;
+    padding: 32px;
+    background: var(--bg-surface);
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.formulario-cabecalho h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--text-main);
+    letter-spacing: -0.02em;
+}
+
+.formulario-cabecalho p {
+    margin: 4px 0 0 0;
+    font-size: 0.925rem;
+    color: var(--text-muted);
+}
+
+.secao-form {
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 0;
+    background-color: var(--bg-section);
+}
+
+.secao-form legend {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    padding: 0 8px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+}
+
+.grade-form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    grid-column: span 1;
+}
+
+.campo.col-span-2 {
+    grid-column: span 2;
+}
+
+.campo label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+.obrigatorio {
+    color: var(--danger-color);
+    margin-left: 2px;
+}
+
+.campo input,
+.campo select {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: var(--text-main);
+    transition: all 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.campo input:hover,
+.campo select:hover {
+    border-color: #94a3b8;
+}
+
+.campo input:focus,
+.campo select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px var(--focus-ring);
+}
+
+.acoes-form {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.botao {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.botao.principal {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.botao.principal:hover {
+    background-color: var(--primary-hover);
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+}
+
+.botao.secundario {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    color: #475569;
+}
+
+.botao.secundario:hover {
+    background-color: #f1f5f9;
+    color: var(--text-main);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .grade-form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .formulario {
+        padding: 20px;
+    }
+
+    .grade-form {
+        grid-template-columns: 1fr;
+    }
+
+    .campo.col-span-2 {
+        grid-column: span 1;
+    }
+
+    .acoes-form {
+        flex-direction: column-reverse;
+    }
+
+    .botao {
+        width: 100%;
+    }
+}
+html.alto-contraste {
+    --primary-color: #ffff00;
+    --primary-hover: #ffff00;
+    --bg-surface: #000000;
+    --bg-section: #000000;
+    --border-color: #ffffff;
+    --text-main: #ffffff;
+    --text-muted: #ffffff;
+    --danger-color: #ff5555;
+    --focus-ring: rgba(255, 255, 0, 0.35);
+}
+
+html.alto-contraste .formulario {
+    border: 2px solid #fff;
+    box-shadow: none;
+}
+
+html.alto-contraste .secao-form legend {
+    color: #000;
+    background: #ffff00;
+    border: 2px solid #fff;
+}
+
+html.alto-contraste .campo input,
+html.alto-contraste .campo select {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+html.alto-contraste .botao.principal {
+    background-color: #ffff00;
+    color: #000;
+}
+
+html.alto-contraste .botao.secundario {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+}

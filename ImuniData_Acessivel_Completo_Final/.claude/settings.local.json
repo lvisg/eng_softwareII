@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(nohup npm run dev)",
+      "Bash(echo \"started with pid $!\")",
+      "Bash(rm -rf node_modules package-lock.json)",
+      "Bash(npm install *)",
+      "Bash(curl -s -o /dev/null -w \"frontend: %{http_code}\\\\n\" http://localhost:5174/)",
+      "Bash(curl -s http://localhost:8080/api/vacinacoes)",
+      "Bash(curl -s \"http://localhost:8080/vacinacao?page=0&size=2\")",
+      "Bash(curl -s \"http://localhost:5174/vacinacao?page=0&size=2\")"
+    ]
+  }
+}

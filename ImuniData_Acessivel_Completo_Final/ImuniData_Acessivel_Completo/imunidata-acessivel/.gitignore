@@ -1,0 +1,6 @@
+**/target/
+**/node_modules/
+**/dist/
+**/.idea/
+api-imunidata/data/
+*.log

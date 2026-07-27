@@ -1,0 +1,171 @@
+.fab-acessibilidade {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: #0056b3;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    font-size: 1.6rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.fab-acessibilidade:hover {
+    background-color: #003d82;
+    transform: scale(1.05);
+}
+
+.fab-acessibilidade:focus-visible,
+.botao-acessibilidade:focus-visible,
+.btn-fechar:focus-visible {
+    outline: 3px solid #ffbf47;
+    outline-offset: 2px;
+}
+
+.backdrop-acessibilidade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+}
+
+.barra-acessibilidade {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    max-width: 85vw;
+    background: #ffffff;
+    color: #212529;
+    box-shadow: -4px 0 16px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0, 0, 0.2, 1);
+    z-index: 1002;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.barra-acessibilidade:focus {
+    outline: none;
+}
+
+.barra-acessibilidade.aberta {
+    transform: translateX(0);
+}
+
+.cabecalho-painel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 10px;
+}
+
+.cabecalho-painel h2 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.btn-fechar {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.secao-acessibilidade {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.secao-acessibilidade h3 {
+    font-size: 0.95rem;
+    margin: 0 0 4px 0;
+    color: #495057;
+}
+
+.botao-acessibilidade {
+    width: 100%;
+    padding: 10px 14px;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-weight: 600;
+    color: #212529;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.botao-acessibilidade:hover:not(:disabled) {
+    background-color: #e2e6ea;
+}
+
+.botao-acessibilidade:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.botao-acessibilidade.secundario {
+    background-color: transparent;
+    border-color: #dc3545;
+    color: #dc3545;
+}
+
+.botao-acessibilidade.secundario:hover:not(:disabled) {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+.grupo-botoes-fonte {
+    display: flex;
+    gap: 8px;
+}
+
+.botao-acessibilidade.curto {
+    flex: 1;
+}
+
+.atalhos-container {
+    margin-top: auto;
+    font-size: 0.85rem;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.atalhos-container summary {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.atalhos-container ul {
+    margin: 8px 0 0 0;
+    padding-left: 16px;
+}
+
+kbd {
+    background-color: #e9ecef;
+    border: 1px solid #adb5bd;
+    border-radius: 3px;
+    padding: 1px 4px;
+    font-size: 0.75rem;
+}
